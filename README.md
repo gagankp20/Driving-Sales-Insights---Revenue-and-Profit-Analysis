@@ -11,9 +11,9 @@ SALES DASHBOARD
  The next chart indicates sales and profit of individual items for the selected year. Intricate details are added to indicate if the sales are doing worse than the previous year.   
  The final chart compares sales and profit over a time of 52 months. The average sales and profit is indicated in the chart and is color cordinated based on average.  
 
-CUSTOMER DASHBOARD
- Contains 5 charts which provids KPIs of the data.   
- There are three charts which indicate total customers, sales per customer and total orders. This chart compares currect year and previous year value helping gain insights. Highest and lowest of the year are also indicated.   
- The next chart indicates customer distribution by order.   
- The final chart indicates top 10 custoemrs based on profit for that year.   
+CUSTOMER DASHBOARD  
+ Contains 5 charts which provids KPIs of the data.     
+ There are three charts which indicate total customers, sales per customer and total orders. This chart compares currect year and previous year value helping gain insights. Highest and lowest of the year are also indicated.     
+ The next chart indicates customer distribution by order.     
+ The final chart indicates top 10 custoemrs based on profit for that year.     
 
