@@ -1,19 +1,23 @@
-# Driving-Sales-Insights---Revenue-and-Profit-Analysis
+# F1 Oracle: Race Performance Predictor
+This is an end-to-end data science project designed to explore full-stack analytics, from database management to machine learning deployment. This project integrates PostgreSQL for data warehousing, Scikit-learn for predictive modeling, and Streamlit for the user interface. It also features a unique integration of Generative AI to provide "human-like" sports analysis.
+In this project, the architecture is divided into three main components: The Data Layer, The Prediction Engine, and The AI Dashboard.
 
-This is a self experimenting project to learn and explore more about tableau and analystics on a sales dataset obtained from kaggle. 
-This project uses most of the key skills in tableau such as calculated fields, parameters filters and much more. Using this makes it user friendly and easy to interact.
+DATA PIPELINE & STORAGE
 
-In this project, we mainly have two main parts. One contains all the details about sales and the other contains details of customer. 
+Built on a robust relational database structure using PostgreSQL.
+Data Warehouse: The system ingests 14 distinct CSV datasets (including circuits, lap times, pit stops, and race results) into a normalized SQL schema (f1_db).
+ETL Process: Custom Python scripts utilize SQLAlchemy and Pandas to clean data, handle foreign key dependencies, and safely transact data into the database.
+Safety Protocols: Implements environment variable protection for database credentials and secure connection handling.
 
-SALES DASHBOARD   
- Contains 5 charts which provides KPIs of the data.   
- There are three charts which indicate total sales, total profit and total quantity. This chart compares currect year and previous year value helping gain insights. Highest and lowest of the year are also indicated.   
- The next chart indicates sales and profit of individual items for the selected year. Intricate details are added to indicate if the sales are doing worse than the previous year.   
- The final chart compares sales and profit over a time of 52 months. The average sales and profit is indicated in the chart and is color cordinated based on average.  
+MACHINE LEARNING ENGINE 
 
-CUSTOMER DASHBOARD  
- Contains 5 charts which provids KPIs of the data.     
- There are three charts which indicate total customers, sales per customer and total orders. This chart compares currect year and previous year value helping gain insights. Highest and lowest of the year are also indicated.     
- The next chart indicates customer distribution by order.     
- The final chart indicates top 10 custoemrs based on profit for that year.     
+Contains the logic for forecasting driver performance.
+Feature Engineering: The model utilizes complex calculated fields such as 5-race rolling averages for driver points, constructor consistency, and qualifying performance vs. race results.
+Prediction Model: A pre-trained Python model (.pkl) analyzes historical patterns to predict the exact finishing position of a driver based on their starting grid slot and team performance.
 
+INTERACTIVE DASHBOARD & AI ANALYST
+
+A user-friendly web application built with Streamlit that serves as the front end.
+Dynamic Controls: Features dependent dropdown menus—selecting a driver (e.g., Lewis Hamilton) automatically filters the "Team" dropdown to only show constructors they have actually driven for (e.g., Mercedes, McLaren).
+Real-time Inference: Users can manipulate the "Starting Position" slider to see how qualifying performance impacts the predicted race result instantly.
+GenAI Integration: The dashboard connects to Google Gemini. Once a numerical prediction is made, the AI acts as a "Virtual Sports Analyst," interpreting the data to generate a text-based summary explaining the context of the prediction.
